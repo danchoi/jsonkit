@@ -1,6 +1,6 @@
 {-# LANGUAGE OverloadedStrings, RecordWildCards #-} 
 module Main where
-import JSONKit
+import JSONKit.Base
 import qualified Options.Applicative as O
 import Data.Aeson
 import Data.Attoparsec.Lazy as Atto hiding (Result)

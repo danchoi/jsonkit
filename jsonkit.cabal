@@ -16,7 +16,8 @@ build-type:          Simple
 cabal-version:       >=1.10
 
 library
-  exposed-modules:     JSONKit
+  exposed-modules:     JSONKit.Base
+                     , JSONKit.KeyPath
   -- other-modules:       
   -- other-extensions:    
   build-depends:       base >=4.6 && <4.8
@@ -26,6 +27,8 @@ library
                      , attoparsec
                      , unordered-containers
                      , text 
+                     , vector
+                     , scientific
   -- hs-source-dirs:      
   default-language:    Haskell2010
 
@@ -42,6 +45,26 @@ executable jsonmerge
                      , unordered-containers
                      , text >= 1.0.0.0
                      , optparse-applicative
+
+  -- hs-source-dirs:      
+  default-language:    Haskell2010
+
+executable jsontsv
+  main-is:             MainTSV.hs
+  -- other-modules:       
+  -- other-extensions:    
+  build-depends:       base >=4.6 && <4.8
+                     , jsonkit
+                     , aeson >= 0.8.0.0
+                     , bytestring
+                     , containers
+                     , attoparsec
+                     , unordered-containers
+                     , text >= 1.0.0.0
+                     , scientific
+                     , vector
+                     , optparse-applicative
+                     , csv
 
   -- hs-source-dirs:      
   default-language:    Haskell2010

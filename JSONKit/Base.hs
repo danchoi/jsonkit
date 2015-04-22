@@ -1,11 +1,11 @@
 {-# LANGUAGE OverloadedStrings, RecordWildCards #-} 
-module JSONKit where
+module JSONKit.Base where
 import Data.Aeson
-import Data.Attoparsec.Lazy as Atto hiding (Result)
-import Data.Monoid
 import qualified Data.HashMap.Lazy as HM
 import qualified Data.ByteString.Lazy.Char8 as BL
-
+import Data.Attoparsec.Lazy as Atto hiding (Result)
+import Data.Attoparsec.ByteString.Char8 (endOfLine, sepBy)
+import Data.Monoid
 
 
 foldObjects :: Value -> Value -> Value 
@@ -26,8 +26,4 @@ decodeWith p s =
   where f v' r = (\x -> case x of 
                       Success a -> (Just a, r)
                       _ -> (Nothing, r)) $ fromJSON v'
-
-
-
-
 
