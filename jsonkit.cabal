@@ -33,7 +33,7 @@ library
   default-language:    Haskell2010
 
 executable jsonmerge
-  main-is:             MainMerge.hs
+  main-is:             Merge.hs
   -- other-modules:       
   -- other-extensions:    
   build-depends:       base >=4.6 && <4.8
@@ -50,7 +50,7 @@ executable jsonmerge
   default-language:    Haskell2010
 
 executable jsontsv
-  main-is:             MainTSV.hs
+  main-is:             TSV.hs
   -- other-modules:       
   -- other-extensions:    
   build-depends:       base >=4.6 && <4.8
