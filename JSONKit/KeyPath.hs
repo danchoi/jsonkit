@@ -17,6 +17,9 @@ import Control.Applicative
 
 
 
+-- These are output configs specific to TSV
+-- We should separate the evaluation functions from TSV-specific code
+
 
 data Config = Config {
     arrayDelim :: Text
